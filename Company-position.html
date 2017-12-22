@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
+		<title>公司地址</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Company-position.css"/>
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+	</head>
+	<body>
+		<div class="copmany-p">
+			<div id="position"></div>
+			<div class="copmany-d">
+				<h4>河北正信检测技术服务有限公司</h4>
+				<span>邢台市桥西区守敬北路与泉南西大街交叉口南100米</span>
+				<p>
+					途径公交车：
+					11路/11路临时线 15路 30路 31路
+				</p>
+			</div>
+		</div>
+		<div class="nav clearfix">
+			<div class="home">
+				<a href="index.html">
+					<img src="images/home.png"/>
+					<span>返回首页</span>
+				</a>
+			</div>
+			<div class="address">
+				<a href="javasrcipt:;">
+					<img src="images/position-not.png"/>
+					<span>公司地址</span>
+				</a>
+			</div>
+			<div class="contact-us">
+				<a href="javasrcipt:;">
+					<img src="images/Contact-us-not.png"/>
+					<span>联系我们</span>
+				</a>
+			</div>
+		</div>
+		<div class="placeholder"></div>
+	</body>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Hc1Z1u8PPfSSMqm3n3TzLmecfGbZdG6P"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	    // 百度地图API功能
+	    var map = new BMap.Map("position");  // 创建Map实例
+//	    map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	    map.centerAndZoom("邢台市桥西区守敬北路与泉南西大街交叉口南100米", 18);      // 初始化地图,用城市名设置地图中心点
+		map.enableScrollWheelZoom();//启动鼠标滚轮缩放地图
+	    var local = new BMap.LocalSearch(map, {
+	        renderOptions: { map: map, panel: "r-result" }
+	    });
+	    local.search("邢台市桥西区守敬北路与泉南西大街交叉口南100米");
+//	    $(function(){
+//	        $("#dituContent").css("width",$(window).width());
+//	    })
+	</script>
+</html>

@@ -1,0 +1,23 @@
+.copmany-p{
+	width: 100vw;
+	overflow: hidden;
+}
+.copmany-p img{
+	width: 100vw;
+}
+.copmany-p .copmany-d{
+	text-align: center;
+	font-size: .2rem;
+	padding-top: .4rem;
+}
+.copmany-p .copmany-d h4{
+	font-size: .25rem;
+	margin-bottom: .1rem;
+}
+#position{
+	width: 100%;
+	height: 7rem;
+	overflow: hidden;
+	margin:0;
+	font-family:"微软雅黑";
+}
