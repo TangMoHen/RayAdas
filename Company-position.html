@@ -4,9 +4,9 @@
 		<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
 		<title>公司地址</title>
-		<link rel="stylesheet" type="text/css" href="base.css"/>
-		<link rel="stylesheet" type="text/css" href="Company-position.css"/>
-		<link rel="stylesheet" type="text/css" href="nav.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Company-position.css"/>
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
 	</head>
 	<body>
 		<div class="copmany-p">
@@ -23,27 +23,68 @@
 		<div class="nav clearfix">
 			<div class="home">
 				<a href="index.html">
-					<img src="home.png"/>
+					<img src="images/home.png"/>
 					<span>返回首页</span>
 				</a>
 			</div>
 			<div class="address">
 				<a href="javasrcipt:;">
-					<img src="position-not.png"/>
+					<img src="images/position-not.png"/>
 					<span>公司地址</span>
 				</a>
 			</div>
 			<div class="contact-us">
 				<a href="javasrcipt:;">
-					<img src="Contact-us-not.png"/>
+					<img src="images/Contact-us-not.png"/>
 					<span>联系我们</span>
 				</a>
 			</div>
 		</div>
 		<div class="placeholder"></div>
 	</body>
-	<script src="jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
-	<script type="javascript" src="https://api.map.baidu.com/api?v=2.0&ak=Hc1Z1u8PPfSSMqm3n3TzLmecfGbZdG6P"></script>
-	<script src="rem.js" type="text/javascript" charset="utf-8"></script>
-	<script src="Company-position.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8">
+	</script><script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.2&key=51bd1988fd61526022fae192de188cdc"></script> 
+	<script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+        var map = new AMap.Map('position',{
+            resizeEnable: true,
+            zoom: 15,
+            center: [114.482056,37.082183]
+        });
+	    var marker = new AMap.Marker({
+	        position: map.getCenter()
+	    });
+	    marker.setMap(map);
+	    
+	    AMapUI.loadUI(['overlay/SimpleInfoWindow'], function(SimpleInfoWindow) {
+
+        var marker = new AMap.Marker({
+            map: map,
+            zIndex: 9999999,
+            position: map.getCenter()
+        });
+
+        var infoWindow = new SimpleInfoWindow({
+
+            infoTitle: '<strong>河北正信检测技术服务有限公司</strong>',
+            infoBody: '<p class="my-desc"><span>邢台市桥西区守敬北路与泉南西大街交叉口南100米。</span> <br/> 途径公交车：<br />' +
+                '11路/11路临时线 15路 30路 31路</p>',
+
+            //基点指向marker的头部位置
+            offset: new AMap.Pixel(0, -31)
+        });
+
+        function openInfoWin() {
+            infoWindow.open(map, marker.getPosition());
+        }
+
+        //marker 点击时打开
+        AMap.event.addListener(marker, 'click', function() {
+            openInfoWin();
+        });
+
+        openInfoWin();
+    });
+	</script>
 </html>
