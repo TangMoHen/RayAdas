@@ -16,8 +16,17 @@
 }
 #position{
 	width: 100%;
-	height: 7rem;
+	height: 70vh;
 	overflow: hidden;
 	margin:0;
 	font-family:"微软雅黑";
+}
+.amap-ui-smp-ifwn-container{
+	width: 3rem;
+	height: 2rem;
+	font-size: .18rem;
+	bottom: -.6rem;
+}
+.amap-ui-smp-ifwn-container p{
+	font-size: .11rem;
 }
