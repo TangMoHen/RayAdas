@@ -30,14 +30,15 @@
 	color:#fff; 
 	position:relative; 
 	line-height:.26rem;
-	font-size: .14rem;
+	font-size: .28rem;
+	padding: .1rem 0;
 }
 .style ul li .see{
 	height: .4rem;
 	line-height: .4rem;
 	position: relative;
 	padding: 0 .1rem;
-	font-size: .14rem;
+	font-size: .28rem;
 }
 .style ul li .see span{
 	background: url(see.png) no-repeat left;
