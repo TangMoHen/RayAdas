@@ -4,6 +4,7 @@
 	margin: .3rem .19rem 0;
 	position:relative;
 	float: left;
+	box-shadow:5px 5px 10px #f3f3f3, -5px 5px 10px #f3f3f3;
 }
 .style ul li img{
 	width: 3.2rem;
