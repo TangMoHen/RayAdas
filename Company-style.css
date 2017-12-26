@@ -1,0 +1,49 @@
+.style ul li{
+	width: 3.2rem;
+	height: 2.52rem;
+	margin: .3rem .19rem 0;
+	position:relative;
+	float: left;
+}
+.style ul li img{
+	width: 3.2rem;
+}
+.style ul li .test{ 
+	position:absolute; 
+	left:0; 
+	top:0; 
+	width:100%;
+}
+.style ul li .bg{ 
+	position:absolute; 
+	left:0; 
+	bottom:0; 
+	background:#e4e3e3; 
+	width:100%;
+	height:100%; 
+	opacity:0.5; 
+	filter:alpha(opacity:50);
+}
+.style ul li .hello{ 
+	text-align: center;
+	color:#fff; 
+	position:relative; 
+	line-height:.26rem;
+	font-size: .14rem;
+}
+.style ul li .see{
+	height: .4rem;
+	line-height: .4rem;
+	position: relative;
+	padding: 0 .1rem;
+	font-size: .14rem;
+}
+.style ul li .see span{
+	background: url(../images/see.png) no-repeat left;
+	background-size: .24rem .16rem;
+	padding-left: .4rem;
+	color: #9c9b9b;
+}
+.style ul li .see p{
+	
+}
