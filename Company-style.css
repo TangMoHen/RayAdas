@@ -39,7 +39,7 @@
 	font-size: .14rem;
 }
 .style ul li .see span{
-	background: url(../images/see.png) no-repeat left;
+	background: url(see.png) no-repeat left;
 	background-size: .24rem .16rem;
 	padding-left: .4rem;
 	color: #9c9b9b;
